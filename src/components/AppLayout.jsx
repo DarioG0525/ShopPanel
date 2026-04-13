@@ -39,14 +39,6 @@ function AppLayout() {
           </div>
         </div>
 
-        <div className="mt-6 rounded-[1.75rem] bg-gradient-to-br from-slate-950 via-slate-900 to-blue-900 p-5 text-white shadow-[0_20px_50px_rgba(15,23,42,0.18)]">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-blue-200/80">Order Activity</p>
-          <h2 className="mt-3 text-2xl font-black tracking-tight">Panel de usuario</h2>
-          <p className="mt-2 text-sm leading-6 text-slate-200">
-            Gestiona productos, pedidos y estados desde una interfaz simple y limpia.
-          </p>
-        </div>
-
         <nav className="mt-6 flex flex-1 flex-col gap-2 px-1">
           <NavLink to="/dashboard" className={sidebarNavClass}>
             <span>⌂</span>
@@ -63,14 +55,6 @@ function AppLayout() {
         </nav>
 
         <div className="mt-auto space-y-3 px-1">
-          <div className="rounded-[1.5rem] bg-white p-4 shadow-sm ring-1 ring-slate-100">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">Sesion activa</p>
-            <p className="mt-2 text-sm font-semibold text-slate-900">
-              {user?.username}
-            </p>
-            <p className="text-sm text-slate-500">Sesion persistida con localStorage</p>
-          </div>
-
           <button
             type="button"
             onClick={handleLogout}
@@ -94,7 +78,6 @@ function AppLayout() {
               </div>
               <div>
                 <h1 className="text-lg font-bold text-slate-950">ShopPanel</h1>
-                <p className="text-xs text-slate-500">Hola, {user?.firstName}</p>
               </div>
             </div>
 

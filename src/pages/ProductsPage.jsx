@@ -80,11 +80,7 @@ function ProductsPage() {
     <section className="grid gap-5 xl:grid-cols-[1fr_300px] xl:items-start">
       <div className="space-y-5">
         <header className="rounded-[2rem] bg-white p-5 shadow-sm ring-1 ring-slate-100 sm:p-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-700">Curated Collection</p>
-          <h2 className="mt-2 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">Listado de productos</h2>
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base">
-            Explora el catalogo de DummyJSON, revisa el detalle y registra tus pedidos en segundos.
-          </p>
+          <h2 className="text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">Productos</h2>
         </header>
 
         <form onSubmit={handleSearch} className="flex flex-col gap-2 sm:flex-row">
@@ -102,11 +98,7 @@ function ProductsPage() {
           </button>
         </form>
 
-        {message ? (
-          <p className="rounded-lg border border-teal-200 bg-teal-50 px-3 py-2 text-sm text-teal-800">
-            {message}
-          </p>
-        ) : null}
+        {message ? <p className="rounded-lg bg-slate-50 px-3 py-2 text-sm text-slate-700">{message}</p> : null}
 
         {error ? (
           <p className="rounded-lg border border-rose-200 bg-rose-50 px-3 py-2 text-sm text-rose-700">
@@ -132,8 +124,7 @@ function ProductsPage() {
 
       <aside className="space-y-4 xl:sticky xl:top-24">
         <div className="rounded-[1.75rem] bg-white p-5 shadow-sm ring-1 ring-slate-100">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-700">Resumen</p>
-          <div className="mt-4 space-y-3">
+          <div className="space-y-3">
             <div className="flex items-center justify-between rounded-2xl bg-slate-50 px-4 py-3">
               <span className="text-sm text-slate-600">Productos</span>
               <span className="text-xl font-black text-slate-950">{stats.total}</span>
@@ -147,13 +138,6 @@ function ProductsPage() {
               <span className="text-xl font-black text-amber-600">{stats.pending}</span>
             </div>
           </div>
-        </div>
-
-        <div className="rounded-[1.75rem] bg-gradient-to-br from-slate-950 via-slate-900 to-blue-900 p-5 text-white shadow-[0_20px_50px_rgba(15,23,42,0.18)]">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-blue-200/80">Tip</p>
-          <p className="mt-3 text-sm leading-7 text-slate-200">
-            Usa la busqueda para filtrar rapido y luego abre el detalle o agrega el producto a pedidos.
-          </p>
         </div>
       </aside>
 
